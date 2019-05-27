@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+   
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+
+
+    <script type="text/javascript" src="js/index.js"></script>
+
+    
+    <title>Hello World</title>
+</head>
+
+<body>
+        <div data-role="page" id="home">
+
+            <div data-role="header" data-positon="fixed">
+                 <h1><span style="color:red;font-size:22px"><strong>Madurai Demo</span></strong></h1>
+            </div>
+
+            <div  data-role="main" class="ui-content">
+                <h2>Welcome............!!!</h2>
+                <br><br>
+                <ul data-role="listview">
+                    <li><a href="#deviceInfo" data-transition="slide"><strong>Device Information</strong></a></li>
+                    <li><a href="#batterystatus" data-transition="slide"><strong>Battery Status</strong></a></li>
+                    <li><a href="#dialogs" data-transition="slide"><strong>Dialog </strong></a></li>
+                    <li><a href="#orientation" data-transition="slide"><strong>Device Orientation</strong></a></li>
+                      <li><a href="#camera" data-transition="slide"><strong>Camera</strong></a></li>
+                       <li id="conType"></li>
+                        <li><a href="#mediacapture" data-transition="slide"><strong>Media Capture</strong></a></li>
+                        <li><a href="#phvibrate" data-transition="slide"><strong>Vibration</strong></a></li>
+                </ul>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h5>copyrights  (c)</h5>
+            </div>
+
+        </div>
+         <div data-role="page" id="mediacapture">
+
+            <div data-role="header" data-positon="fixed">
+                 <h1><strong>Media Capture</strong></h1>
+            </div>
+
+
+            <div  data-role="main" class="ui-content">
+                <button id="capAudio">Capture Audio</button>
+                <div id="audioOut"></div>
+             </div>
+            <div data-role="footer" data-position="fixed">
+                <h5>copyrights  (c)</h5>
+            </div>
+        </div>
+
+        <div data-role="page" id="phvibrate">
+            <div data-role="header" data-positon="fixed">
+                 <h1><strong>Phone Vibration</strong></h1>
+            </div>
+            <div  data-role="main" class="ui-content">
+                <button id="vibrate">Vibration Mode</button>
+             </div>
+            <div data-role="footer" data-position="fixed">
+                <h5>copyrights  (c)</h5>
+            </div>
+        </div>
+
+         <div data-role="page" id="camera">
+
+            <div data-role="header" data-positon="fixed">
+                 <h1><strong>Camera Details</strong></h1>
+            </div>
+
+            <div  data-role="main" class="ui-content">
+                
+            <button id="getPicCamera">getPicture-Camera</button>
+                <button id="getPicGall">getPicture-Gallery</button>
+                <img id="cameraOutput" src=" " style="width:300px;height:300px">
+             </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h5>copyrights  (c)</h5>
+            </div>
+        </div>
+
+         <div data-role="page" id="orientation">
+
+            <div data-role="header" data-positon="fixed">
+                 <h1><strong>Device Orientation</strong></h1>
+            </div>
+
+            <div  data-role="main" class="ui-content">
+                <ul data-role="listview">
+                   
+                   <li id="alpha"></li>
+                   <li id="beta"></li>
+                   <li id="gamma"></li>
+                </ul>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h5>copyrights  (c)</h5>
+            </div>
+        </div>
+
+
+        <div data-role="page" id="deviceInfo">
+
+            <div data-role="header" data-positon="fixed">
+                 <h1><strong>Device Information</strong></h1>
+            </div>
+
+            <div  data-role="main" class="ui-content">
+                <button id="getDevInfo"> Get Device Info</button>
+                <br>
+                <ul data-role="listview">
+                   
+                   <li id="devSerial"></li>
+                   <li id="devModel"></li>
+                   <li id="devVersion"></li>
+                </ul>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h5>copyrights  (c)</h5>
+            </div>
+        </div>
+
+
+       <div data-role="page" id="dialogs">
+
+            <div data-role="header" data-positon="fixed">
+                 <h1><strong>Dialogs</strong></h1>
+            </div>
+
+            <div  data-role="main" class="ui-content">
+                <button id="beep"> ***Beep***</button>  
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h5>copyrights  (c)</h5>
+            </div>
+        </div>
+
+
+
+          <div data-role="page" id="batterystatus">
+
+            <div data-role="header" data-positon="fixed">
+                 <h1><strong>Battery  Information</strong></h1>
+            </div>
+
+            <div  data-role="main" class="ui-content">
+                <button id="getBatInfo"> Get Battery Info</button>
+                <br>
+                <ul data-role="listview">
+                   <li id="batLevel"></li>
+                   <li id="batIsConnected"></li>
+                  
+                </ul>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h5>copyrights  (c)</h5>
+            </div>
+
+
+        </div>
+        
+    
+  
+</body>
+
+</html>
